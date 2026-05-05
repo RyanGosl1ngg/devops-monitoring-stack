@@ -1,0 +1,12 @@
+- hosts: vps
+  become: true
+  tasks:
+    - name: Stop containers
+      command: docker compose down
+      args:
+        chdir: /opt/web-stack
+
+    - name: Remove project
+      file:
+        path: /opt/web-stack
+        state: absent
