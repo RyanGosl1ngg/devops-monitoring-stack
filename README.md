@@ -20,6 +20,19 @@ node-exporter → Prometheus → Grafana
 Internal services are bound to 127.0.0.1
 Access is provided via SSH tunneling
 
+##  Access (SSH Tunnel)
+
+Internal services (Grafana and Prometheus) are not exposed to the internet.
+Access is provided via SSH tunneling.
+
+### Grafana
+ssh -L 3000:localhost:3000 root@155.212.164.99
+http://localhost:3000
+
+### Prometheus
+ssh -L 9090:localhost:9090 root@155.212.164.99
+http://localhost:9090
+
 ## Deploy
 cd ansible
 ansible-playbook -i inventory.ini deploy.yml
