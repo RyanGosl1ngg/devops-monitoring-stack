@@ -26,11 +26,11 @@ Internal services (Grafana and Prometheus) are not exposed to the internet.
 Access is provided via SSH tunneling.
 
 ### Grafana
-ssh -L 3000:localhost:3000 root@155.212.164.99
+ssh -L 3000:localhost:3000 root@servIP
 http://localhost:3000
 
 ### Prometheus
-ssh -L 9090:localhost:9090 root@155.212.164.99
+ssh -L 9090:localhost:9090 root@servIP
 http://localhost:9090
 
 ## Deploy
